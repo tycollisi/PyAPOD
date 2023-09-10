@@ -57,7 +57,7 @@ if apod_data:
 
     # Specify the directory where you would like to save the image
     # Go to the directory you wish to save to in your terminal, type the command pwd
-    save_directory = '/Users/tycollisi/Dropbox/python-folders/APOD/apod_images'
+    save_directory = os.getenv("SAVE_DIRECTORY") 
 
     # Save the image to the specified directory
     file_path = os.path.join(save_directory, file_name)
@@ -89,7 +89,7 @@ if apod_data:
     limited_explanation_text = "\n".join(text_lines)
     
     # Specify the text and add position
-    text = f"Title: {apod_data['title']}\nDate: {apod_data['date']}\nExplanation:\n{limited_explanation_text}"
+    text = f"Title: {apod_data['title']}\nAPOD: {apod_data['date']}\nExplanation:\n{limited_explanation_text}"
 
     # Choose a font and font size
     font = ImageFont.truetype("/Users/tycollisi/Dropbox/python-folders/APOD/font/AstroSpace.ttf", size=18)  # Change the font path and size as needed
@@ -109,7 +109,7 @@ if apod_data:
 
     # Specify the directory where you would like to save the updated image
     # Go to the directory you wish to save to in your terminal, type the command pwd
-    updated_save_directory = '/Users/tycollisi/Dropbox/python-folders/APOD/updated_apod_images'
+    updated_save_directory = os.getenv("UPDATED_SAVE_DIRECTORY")
     
     # Save the modified image
     final_image_file_name = f"updated_{file_name}.png"
