@@ -123,23 +123,3 @@ if apod_data:
 
     
     
-    # # Construct AppleScript to set final image as your desktop background
-    # applescript_command = f'''
-    # tell application "Finder"
-    #     set desktop picture to POSIX file "{final_image_path}"
-    # end tell
-    # '''
-
-    # # Run the AppleScript command using the osascript command
-    # os.system(f"osascript -e '{applescript_command}'")
-
-    
-    
-    # Next goals:
-    # 1. Have explanation fit on the image. Character limit per line? CHECK
-    # 2. Save updated images to updated_apod_images directory CHECK
-    # 3. Get transparent text working CHECK
-    # 4. Have script set as desktop background when it runs
-    # 5. Find an ideal method to run the script automatically at a given time.
-    # 6. Have the script make the image directories if they dont exist, so other people dont have to specify where they are stored.
-
